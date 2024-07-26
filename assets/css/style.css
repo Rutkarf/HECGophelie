@@ -1,0 +1,259 @@
+/* style.css */
+
+@font-face {
+    font-family: 'Extenda40';
+    src: url('fonts/Extenda40.ttf');   
+}
+
+
+/* Assurez-vous que les éléments de la navbar sont alignés horizontalement */
+.navbar-nav {
+    flex-direction: row;
+}
+
+/* Espacement et style des liens de navigation */
+.nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border: 2px solid #83cee9;
+    border-radius: 5px; /* Facultatif : pour arrondir les coins des boîtes */
+    padding: 5px 10px; /* Ajustez le padding selon vos besoins */
+    margin: 0 5px; /* Ajoute un espace entre les boîtes */
+    background-color: #83cee9; /* Colore l'intérieur des boîtes */
+    color: rgb(16, 16, 16); /* Change la couleur du texte pour être lisible sur fond bleu */
+    text-align: center; /* Centre le texte à l'intérieur des boîtes */
+}
+
+/* Optionnel : Couleurs et styles supplémentaires */
+.nav-link:hover {
+    background-color: orange; /* Change la couleur de fond au survol */
+    color: #000; /* Couleur au survol des liens */
+}
+
+
+/* Styles pour la section avec l'image de fond */
+.background-section {
+    background-image: url('../images/BackGroundsection1.png');
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0; /* Ajuster les valeurs selon vos besoins */
+}
+
+/* Style personnalisé pour le titre principal */
+h1 {
+    color: #69c7e9;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: -1px -1px 2px #83cee9, 
+                 1px 1px 2px #83cee9; /* Réduit l'intensité et l'étendue de l'ombre */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Styles personnalisés pour les catégories */
+.category {
+    margin-bottom: 20px;
+    /* Ajouter du padding pour le conteneur si nécessaire */
+    padding: 10px;
+    /* Assurez-vous que le texte est centré à l'intérieur du conteneur */
+    text-align: center;
+}
+
+/* Styles pour le titre <h3> */
+.category h3 {
+    font-family: 'Calibri';
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.3); /* Fond gris avec plus de transparence */
+    
+    border-radius: 20px; /* Augmente le rayon des coins arrondis */
+    backdrop-filter: blur(5px); /* Flou pour voir le background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour donner du relief */
+    margin: 0; /* Supprime les marges pour que la boîte soit au plus près du texte */
+}
+
+/* Styles pour le paragraphe <p> */
+.category p {
+    color: #ffffff;
+    margin-top: 10px; /* Espacement entre le titre et le paragraphe */
+}
+
+
+
+
+/* Styles pour la deuxième section */
+.second-section {
+    background-color: #cacaca;
+    padding: 20px 0;
+}
+
+/* Style pour le titre <h2> dans la deuxième section */
+.second-section h2 {
+    font-family: 'Calibri'; /* Assurez-vous que la police est chargée correctement */
+    color: #ffffff;
+    background-color: rgba(247, 162, 101, 0.3); /* Fond avec transparence */
+    padding: 10px 20px; /* Réduit le padding pour que la boîte s'adapte mieux au texte */
+    border-radius: 20px; /* Augmente le rayon des coins arrondis */
+    backdrop-filter: blur(8px); /* Flou pour voir le background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour donner du relief */
+    margin: 0 auto 20px; /* Centre le titre et ajoute un espace en dessous */
+    text-align: center; /* Centre le texte à l'intérieur de la boîte */
+    display: inline-block; /* Ajuste la largeur de la boîte au contenu */
+    max-width: none; /* Supprime la limite de largeur pour mieux s'ajuster au texte */
+}
+
+
+
+/* Style pour le texte mis en évidence avec effet de boîte */
+.highlight {
+    font-family: 'Calibri'; /* Assurez-vous que la police est chargée correctement */
+    color: #ffffff;
+    background-color: #83cee9; /* Fond avec transparence */
+    padding: 5px 10px; /* Espacement à l'intérieur de la boîte */
+    border-radius: 10px; /* Coins arrondis */
+    backdrop-filter: blur(5px); /* Flou pour voir le background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombre pour donner du relief */
+    display: inline-block; /* Ajuste la largeur de la boîte au contenu */
+}
+
+
+
+
+
+/* Conteneur de la colonne avec les images */
+.image-container {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    height: 100%; /* Utilise toute la hauteur disponible du conteneur */
+    position: relative; /* Nécessaire pour que les éléments enfants puissent être positionnés correctement */
+}
+
+/* Style des éléments des images */
+.image-item {
+    display: flex;
+    justify-content: center; /* Centre les images horizontalement */
+    align-items: center; /* Centre les images verticalement */
+    margin: 0; /* Réinitialise les marges par défaut */
+    height: 25%; /* Permet à chaque image de prendre une proportion égale de l'espace vertical */
+}
+
+/* Styles spécifiques pour chaque image */
+.image-item:nth-child(odd) {
+    align-self: flex-start; /* Aligne les images impaires (1, 3, ...) en haut */
+}
+
+.image-item:nth-child(even) {
+    align-self: flex-end; /* Aligne les images paires (2, 4, ...) en bas */
+}
+
+/* Style des images */
+.rounded-circle {
+    border-radius: 50%; /* Rend l'image circulaire */
+    max-width: 100px; /* Limite la largeur maximale des images */
+    width: auto; /* Ajuste la largeur pour maintenir le ratio d'aspect */
+    height: auto; /* Ajuste la hauteur pour maintenir le ratio d'aspect */
+    object-fit: cover; /* Couvre le conteneur tout en maintenant le ratio d'aspect */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styles pour la troisième section */
+.third-section {
+    padding: 40px 0;
+    position: relative;
+}
+
+/* Conteneur du logo et du titre courbé */
+.logo-wrapper {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Logo centré */
+.logo-center {
+    max-width: 200px; /* Ajuster selon la taille de votre logo */
+    display: block;
+    margin: 0 auto;
+}
+
+/* SVG pour le titre courbé */
+.curved-title-svg {
+    position: absolute;
+    top: -80px; /* Ajuster pour placer le titre au-dessus du logo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px; /* Ajuster la largeur du SVG selon vos besoins */
+    height: 200px; /* Ajuster la hauteur du SVG pour s'adapter au texte */
+    z-index: 1; /* Assure que le texte est au-dessus du logo */
+}
+
+/* Style du texte courbé */
+.curved-title-svg text {
+    font-size: 2rem; /* Réduire légèrement la taille du texte */
+    font-weight: bold;
+    fill: #333; /* Couleur du texte */
+    text-anchor: middle; /* Centrer le texte */
+}
+
+
+
+
+
+
+
+
+
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Ajuster la hauteur selon vos besoins */
+    object-fit: cover;
+}
+
+.card-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    color: #fff; /* Couleur du texte, ajuster selon l'image de fond */
+
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: 'Extenda40';
+    
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7), 
+                 -2px -2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
